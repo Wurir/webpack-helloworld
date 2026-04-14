@@ -1,5 +1,6 @@
 const path = require('path')
 //importuje biblioteke [path] z [node.js]
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './src/app.js', // definiuje plik wejsciowy
@@ -9,5 +10,11 @@ module.exports = {
     },
     module: {
         rules: [] //obecnie brak dodatkowych ustawien
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html'
+        })
+    ]
 } //eksportuje ustawienia dla webpacka
