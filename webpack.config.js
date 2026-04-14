@@ -9,7 +9,13 @@ module.exports = {
         filename: 'app.min.js', //defniuje nazwe pliku wyjsciowego
     },
     module: {
-        rules: [] //obecnie brak dodatkowych ustawien
+        rules: [
+            {
+                test: /\.js$/, //określam jakie pliki będą brane pod uwage
+                exclude: /node_modules/, //określam wykluczenia
+                use: 'babel-loader', //określam jaki loader ma byc wykorzystany
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
