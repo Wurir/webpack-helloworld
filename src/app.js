@@ -1,7 +1,9 @@
 console.log('webpack')
 console.log('webpack server dziala!');
 
-const getCurrentDate = require('./getDate.js')
+const Point = require('./Point.js')
 
-const data = getCurrentDate()
-console.log(data.getFullYear());
+const p1 = new Point(1, 2)
+
+console.log(p1); // Point {x: 1, y: 2}
+
