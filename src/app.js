@@ -1,9 +1,5 @@
-console.log('webpack')
-console.log('webpack server dziala!');
+const {calcSum} = require('./math.js') // mozna uzyc destrukturyzacji importujac fn
 
-const Point = require('./Point.js')
+const sum = calcSum(1, 2, 3, 4)
 
-const p1 = new Point(1, 2)
-
-console.log(p1); // Point {x: 1, y: 2}
-
+console.log(sum); // 10
