@@ -1,5 +1,5 @@
-const {calcSum} = require('./math.js') // mozna uzyc destrukturyzacji importujac fn
+import getCurrentDate from './getDate.js' // importowanie plikow przez przeglądarke wymaga podania rozszerzenia pliku np. (.js)
 
-const sum = calcSum(1, 2, 3, 4)
+const date = getCurrentDate()
 
-console.log(sum); // 10
+console.log(date.getFullYear());
